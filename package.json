@@ -1,14 +1,33 @@
 {
-  "name": "imdb-movie-mcp",
+  "name": "@ranjith-kumar-kuruba/imdb-movie-mcp",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "Model Context Protocol server for IMDB Movie",
+  "main": "build/index.js",
+  "bin":{
+    "imdb-movie-mcp" : "build/index.js"
   },
-  "keywords": [],
+   "scripts": {
+        "build": "tsc && chmod 755 build/index.js",
+        "prepublishOnly": "npm run build"
+    },
+    "files": [
+        "build"
+    ],
+    "keywords": [
+        "mcp",
+        "imdbmovie",
+        "movie",
+        "model-context-protocol",
+        "ai",
+        "assistant"
+    ],
   "author": "",
   "license": "ISC",
+  "repository": {
+        "type": "git",
+        "url": "https://github.com/ranjith-kumar-kuruba/imdb-movie-mcp"
+    },
+    "homepage": "https://github.com/ranjith-kumar-kuruba/imdb-movie-mcp#readme",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.17.0",
     "zod": "^3.25.76"
